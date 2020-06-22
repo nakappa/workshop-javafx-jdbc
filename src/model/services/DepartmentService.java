@@ -1,6 +1,5 @@
 package model.services;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import model.dao.DaoFactory;
@@ -19,5 +18,9 @@ public class DepartmentService {
 		if (obj.getId() == null) dao.insert(obj);
 		
 		else dao.update(obj);
+	}
+	
+	public void remove(Department obj) {
+		dao.deleteById(obj.getId());
 	}
 }
